@@ -20,7 +20,7 @@ for {
 Some(12) map (_ + 1)
 ```
 
-Multiple expressions translate to `flatMap`, with the last one translated to `map`:
+Multiple expressions translate to nested `flatMap`s, with the last one translated to `map`:
 
 ```scala
 for {
