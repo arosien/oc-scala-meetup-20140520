@@ -5,7 +5,7 @@
 * [Ugly code fixup](out/ugly-code-fixup.md)
 * [Java interoperability](out/java-interop.md)
 * Pattern matching
-* [for-comprehensions](out/for-comprehensions.d)
+* [for-comprehensions](out/for-comprehensions.md)
 * Composing functions
 * Partial-function chaining
 * Companion objects
