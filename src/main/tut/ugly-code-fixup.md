@@ -84,3 +84,41 @@ def serviceNames: Set[String] =
 
 serviceNames
 ```
+
+Now this ugly bastard:
+
+```scala
+def serviceName: Option[String] = {
+  if (annotations.isEmpty) {
+    None
+  } else {
+    val sName = serverSideAnnotations.flatMap(_.host).headOption.map(_.serviceName)
+    val cName = clientSideAnnotations.flatMap(_.host).headOption.map(_.serviceName)
+    sName match {
+      case Some(s) => Some(s)
+      case None => cName
+    }
+  }
+}
+
+serviceName
+```
+
+Replace pattern match with `Option#orElse`:
+
+```scala
+def serviceName: Option[String] = {
+  if (annotations.isEmpty) {
+    None
+  } else {
+    val sName = serverSideAnnotations.flatMap(_.host).headOption.map(_.serviceName)
+    val cName = clientSideAnnotations.flatMap(_.host).headOption.map(_.serviceName)
+
+    sName orElse cName // <------
+  }
+}
+
+serviceName
+```
+
+Next?

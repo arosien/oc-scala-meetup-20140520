@@ -1,5 +1,7 @@
 # for-comprehensions
 
+## Breakdown of syntactic sugar
+
 A single expression without `yield` translates to `foreach`:
 
 ```scala

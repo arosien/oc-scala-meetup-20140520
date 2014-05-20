@@ -1,5 +1,7 @@
 # for-comprehensions
 
+## Breakdown of syntactic sugar
+
 A single expression without `yield` translates to `foreach`:
 
 ```scala
@@ -22,7 +24,7 @@ scala> Some(12) map (_ + 1)
 res3: Option[Int] = Some(13)
 ```
 
-Multiple expressions translate to `flatMap`, with the last one translated to `map`:
+Multiple expressions translate to nested `flatMap`s, with the last one translated to `map`:
 
 ```scala
 scala> for {
