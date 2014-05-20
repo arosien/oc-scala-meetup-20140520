@@ -5,13 +5,13 @@
 * [Ugly code fixup](out/ugly-code-fixup.md)
 * [Java interoperability](out/java-interop.md)
 * Pattern matching
-* for-comprehensions
+* [for-comprehensions](out/for-comprehensions.d)
 * Composing functions
 * Partial-function chaining
 * Companion objects
-* Implicit conversions
-* Implicit parameters
 * Type bounds
 * Currying
 * Dependency injection
+* Implicit conversions: *just don't do it*
+* Implicit parameters: *you probably don't need this*
 * Gang-of-four Patterns in Scala

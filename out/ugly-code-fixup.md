@@ -1,6 +1,6 @@
 # Pattern Matching
 
-Actual really ugly code from [Twitter's Zipkin](https://github.com/twitter/zipkin/blob/master/zipkin-common/src/main/scala/com/twitter/zipkin/common/Span.scala) with some (minor) simplifying edits:
+Actual [ugly code](https://github.com/twitter/zipkin/blob/master/zipkin-common/src/main/scala/com/twitter/zipkin/common/Span.scala) from [Twitter's Zipkin](https://github.com/twitter/zipkin) with some (minor) simplifying edits:
 
 ```scala
 scala> import scala.concurrent.duration._
